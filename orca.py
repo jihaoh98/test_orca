@@ -61,9 +61,6 @@ class ORCA:
         left_projection = rel_vel.projectToVector(left_vec)
         right_projection = rel_vel.projectToVector(right_vec)
         
-        print("left_projection: ", left_projection)
-        print("right_projection: ", right_projection)
-        
         vo_closest_circle_center = Point()
         vo_closest_circle_center.init_from_point(vo_truncated_circle_center)
         # choose a projection between left and right
@@ -123,7 +120,7 @@ class ORCA:
 if __name__ == "__main__":
     test_target = ORCA(2.0, 0.1)
     
-    robot_state = np.array([0.0, 0.0, 0.6, 1.0, 0.5])
+    robot_state = np.array([0.0, 0.0, 2.0, 0.0, 0.5])
     obs_state = np.array([0.0, 2.0, 0.0, 0.0, 0.4])
     
     # test_target.comute_vo_circle(robot_state, obs_state)
